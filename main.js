@@ -38,7 +38,7 @@ var longestPalindrome=function(s){
     }
 
     // checks the string starting from zero..
-    
+
     // every time its goes through the whole string
     // it removes the first char and repeats the for loop
 
@@ -61,9 +61,10 @@ var longestPalindrome=function(s){
 
     // sorts the list by length smallest to biggest and gets the last
     // item in the array.
-    return allPalindromes.sort(function (a,b) {
-        return a.length - b.length;
-    })[allPalindromes.length-1].length
+    return {
+        name: allPalindromes.sort(function (a,b) {
+            return a.length - b.length;
+        })[allPalindromes.length-1]
+    };
 }
 
-console.log(longestPalindrome("a"))
